@@ -15,7 +15,6 @@
 | GET    | `/`                     | Returns a random valid word with meaning |
 | GET    | `/?word=example`        | Returns details of the specific word     |
 | GET    | `/health`               | Health check (status: ok)                |
-| GET    | `/info`                 | Returns API meta info                    |
 
 #### ✅ Example Response
 
