@@ -3,14 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sumaiyah Ibrahim",
   "license": "ISC",
-  "description": "",
+  "description": "Get random or defined words from the WordDrip API",
   "dependencies": {
     "express": "^5.1.0",
-    "node-fetch": "^3.3.2"
-  }
+    "node-fetch": "^3.3.2",
+    "worddrip-api": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumaiyahibrahim/worddrip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sumaiyahibrahim/worddrip/issues"
+  },
+  "homepage": "https://github.com/sumaiyahibrahim/worddrip#readme"
 }
