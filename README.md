@@ -75,7 +75,7 @@ getWord();
 # 🛠 Info
 
 - **Author:** Sumaiyah Ibrahim  
-- **Repository:** [GitHub → WordDrip](https://github.com/your-username/worddrip)  
+- **Repository:** [GitHub → WordDrip](https://github.com/sumaiyahibrahim/worddrip)
 - **License:** ISC
 
 ---
