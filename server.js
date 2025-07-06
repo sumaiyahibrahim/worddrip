@@ -1,12 +1,15 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
-const PORT = 3000;
+const fetch = require("node-fetch");
+const PORT = process.env.PORT || 3000;
 
-// fetch by default
 const DICTIONARY_API = "https://api.dictionaryapi.dev/api/v2/entries/en";
 const RANDOM_WORD_API = "https://random-word-api.herokuapp.com/word";
 
-//Format Dictionary API response
+app.use(cors()); // Enable CORS so frontend can access this API
+
+// Format Dictionary API response
 function formatResponse(data) {
   const entry = data[0];
   const meaningBlock = entry.meanings?.[0];
@@ -22,7 +25,7 @@ function formatResponse(data) {
   };
 }
 
-//valid random word with definition
+// Valid random word with definition
 async function getValidRandomWord(retries = 5) {
   for (let i = 0; i < retries; i++) {
     try {
@@ -34,9 +37,11 @@ async function getValidRandomWord(retries = 5) {
 
       if (!data.title) {
         return formatResponse(data);
+      } else {
+        console.warn(`❌ No definition found for: ${randomWord}`);
       }
     } catch (err) {
-      // just retry
+      console.error("⚠️ Error during random word fetch:", err.message);
     }
   }
 
@@ -49,7 +54,7 @@ app.get("/", async (req, res) => {
 
   try {
     if (wordQuery) {
-      //If user provided ?word=
+      // If user provided ?word=someword
       const response = await fetch(`${DICTIONARY_API}/${wordQuery}`);
       const data = await response.json();
 
@@ -61,7 +66,7 @@ app.get("/", async (req, res) => {
       return res.json(result);
     }
 
-    //get a  random valid word
+    // Get a random valid word
     const result = await getValidRandomWord();
     res.json(result);
   } catch (err) {
