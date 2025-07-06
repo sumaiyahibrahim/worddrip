@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WordDrip</title>
+  <title>WordDrip API</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       padding: 2rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #result p {
+      margin: 0.5rem 0;
     }
   </style>
 </head>
 <body>
   <h1>📘 WordDrip API Frontend</h1>
   <button onclick="getRandomWord()">Get Random Word</button>
-  <div id="result" style="margin-top:1rem;"></div>
+
+  <div id="result" style="margin-top: 1rem;"></div>
 
   <script>
     async function getRandomWord() {
-      const res = await fetch("https://worddrip.onrender.com");
-      const data = await res.json();
+      try {
+        const res = await fetch("https://worddrip.onrender.com");
+        const data = await res.json();
 
-      document.getElementById("result").innerHTML = `
-        <p><strong>Word:</strong> ${data.word}</p>
-        <p><strong>Pronunciation:</strong> ${data.pronunciation}</p>
-        <p><strong>Meaning:</strong> ${data.definition}</p>
-        <p><strong>Part of Speech:</strong> ${data.partOfSpeech}</p>
-        <p><strong>Example:</strong> ${data.example}</p>
-        <p><strong>Synonyms:</strong> ${data.synonyms?.join(", ") || "N/A"}</p>
-      `;
+        document.getElementById("result").innerHTML = `
+          <p><strong>Word:</strong> ${data.word}</p>
+          <p><strong>Pronunciation:</strong> ${data.pronunciation}</p>
+          <p><strong>Meaning:</strong> ${data.definition}</p>
+          <p><strong>Part of Speech:</strong> ${data.partOfSpeech}</p>
+          <p><strong>Example:</strong> ${data.example}</p>
+          <p><strong>Synonyms:</strong> ${data.synonyms?.join(", ") || "N/A"}</p>
+        `;
+      } catch (err) {
+        document.getElementById("result").innerHTML = `<p style="color:red;">⚠️ Error fetching word</p>`;
+        console.error(err);
+      }
     }
   </script>
 </body>
