@@ -1,10 +1,8 @@
 {
   "name": "worddrip-api",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
+  "version": "1.0.1",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
@@ -12,16 +10,15 @@
   "license": "ISC",
   "description": "Get random or defined words from the WordDrip API",
   "dependencies": {
-    "express": "^5.1.0",
-    "node-fetch": "^3.3.2",
-    "worddrip-api": "^1.0.0"
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sumaiyahibrahim/worddrip.git"
+    "url": "https://github.com/sumaiyahibrahim/worddrip"
   },
-  "bugs": {
-    "url": "https://github.com/sumaiyahibrahim/worddrip/issues"
-  },
-  "homepage": "https://github.com/sumaiyahibrahim/worddrip#readme"
+  "homepage": "https://github.com/sumaiyahibrahim/worddrip#readme",
+  "engines": {
+    "node": ">=18.x"
+  }
 }
