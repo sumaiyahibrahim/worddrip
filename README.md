@@ -29,10 +29,9 @@
   "synonyms": ["fluke", "chance", "coincidence"]
 }
 ```
-##📦 npm Package
-You can also use WordDrip directly in your Node.js apps via our npm package.
+## 📦 npm Package
+#### You can also use WordDrip directly in your Node.js apps via our npm package.
 
----
 
 ## 🔧 Installation
 
