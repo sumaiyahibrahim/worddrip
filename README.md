@@ -12,7 +12,7 @@
  
 ### ✨ Endpoints 
 
-| Method | Route                   | Description                              |
+| Method | Route                   | Description                              | 
 |--------|-------------------------|------------------------------------------|
 | GET    | `/`                     | Returns a random valid word with meaning |
 | GET    | `/?word=example`        | Returns details of the specific word     |
