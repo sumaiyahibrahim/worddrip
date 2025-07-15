@@ -10,7 +10,7 @@
   
 **Base URL:** [`https://worddrip.onrender.com`](https://worddrip.onrender.com) 
  
-### ✨ Endpoints  
+### ✨ Endpoints   
 
 | Method | Route                   | Description                              | 
 |--------|-------------------------|------------------------------------------| 
