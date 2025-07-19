@@ -6,7 +6,7 @@
 
 --- 
      
-## 🌐 Live API   
+## 🌐 Live API    
     
 **Base URL:** [`https://worddrip.onrender.com`](https://worddrip.onrender.com) 
  
