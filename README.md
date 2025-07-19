@@ -11,7 +11,7 @@
 **Base URL:** [`https://worddrip.onrender.com`](https://worddrip.onrender.com) 
  
 ### ✨ Endpoints    
-
+ 
 | Method | Route                   | Description                              |  
 |--------|-------------------------|------------------------------------------| 
 | GET    | `/`                     | Returns a random valid word with meaning |
