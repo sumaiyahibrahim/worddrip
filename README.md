@@ -13,7 +13,7 @@
 ### ✨ Endpoints    
  
 | Method | Route                   | Description                              |  
-|--------|-------------------------|------------------------------------------| 
+|--------|-------------------------|------------------------------------------|  
 | GET    | `/`                     | Returns a random valid word with meaning |
 | GET    | `/?word=example`        | Returns details of the specific word     |
 | GET    | `/health`               | Health check (status: ok)                |
